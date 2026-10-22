@@ -1,0 +1,1203 @@
+/* ==========================================================
+   RESPONSIVE STYLESHEET: SPICE ROUTE RESTAURANT
+   Breakpoints:
+   - Tablet Landscape & Small Desktop: <= 1024px
+   - Tablet Portrait & Large Phones:   <= 768px
+   - Mobile & Small Screens (320px+):  <= 480px
+   - Ultra-Wide & 4K (2560px+):       >= 2560px
+   ========================================================== */
+
+/* ==========================================================
+   1. TABLET LANDSCAPE & MEDIUM SCREENS (<= 1024px)
+   ========================================================== */
+@media screen and (max-width: 1024px) {
+  #top-bar {
+    padding: 14px 4%;
+  }
+
+  .navlinks {
+    gap: 6px;
+  }
+
+  .navlinks a {
+    padding: 7px 10px;
+    font-size: 0.95rem;
+  }
+
+  .table-book-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .special-dish-grid,
+  .review-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .location-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* ==========================================================
+   2. TABLET PORTRAIT & MOBILE (<= 768px)
+   ========================================================== */
+@media screen and (max-width: 768px) {
+  /* 2-Row Stacked Mobile Navbar */
+  #top-bar {
+    flex-wrap: wrap;
+    padding: 12px 4% 8px;
+    gap: 12px 0;
+  }
+
+  .logo {
+    order: 1;
+    width: auto;
+    text-align: left;
+  }
+
+  .logo strong {
+    font-size: 1.3rem;
+  }
+
+  .logo span {
+    font-size: 0.65rem;
+  }
+
+  .btn {
+    order: 2;
+    width: auto;
+  }
+
+  .table-book-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .navbar {
+    order: 3;
+    width: 100%;
+    border-top: 1px solid rgba(183, 138, 72, 0.15);
+    padding-top: 8px;
+  }
+
+  .navlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .navlinks li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .navlinks a {
+    padding: 8px 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  /* Hero Section */
+  #hero {
+    min-height: 520px;
+    padding: 60px 5%;
+    text-align: center;
+    align-items: center;
+  }
+
+  #hero::after {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 26, 18, 0.82) 0%,
+      rgba(15, 26, 18, 0.6) 100%
+    );
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 16px;
+  }
+
+  .hero-des {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .h-btn {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+  }
+
+  .explore-menu-btn,
+  .whatsapp-btn {
+    width: 100%;
+    margin: 0;
+    padding: 12px 16px;
+  }
+
+  /* Section Spacing */
+  #special-dish,
+  #home-about,
+  #dine-together,
+  #customer-reviews,
+  #a-story,
+  #a-special-pillar,
+  #a-gallery,
+  #r-contact,
+  #r-form-section,
+  #r-location {
+    padding: 60px 5%;
+  }
+
+  /* Home About Split Layout */
+  .about-container,
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-img,
+  .story-img {
+    height: 320px;
+  }
+
+  /* Alternating Zig-Zag Card: Stacked neatly inside media query */
+  .dine-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dine-card:nth-child(even) .dine-card-body,
+  .dine-card .dine-card-body {
+    order: 2 !important;
+    padding: 32px 24px;
+    text-align: left;
+  }
+
+  .dine-card:nth-child(even) .dine-img-wrap,
+  .dine-card .dine-img-wrap {
+    order: 1 !important;
+    min-height: 240px;
+    height: 240px;
+  }
+
+  /* Menu Page Dish Listing */
+  .dish-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pillars-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Gallery Grid */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+  .gallery-card {
+    height: 200px;
+  }
+
+  .item-featured {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: 280px;
+  }
+
+  .item-side-1,
+  .item-side-2,
+  .item-grid-1,
+  .item-grid-2 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* Form Section: Single Column */
+  .form-wrapper {
+    padding: 32px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .field.full-width {
+    grid-column: 1;
+  }
+
+  /* Visit Us Horizontal Strip */
+  .visit-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .visit-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .visit-btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .closing-btn-group,
+  .final-cta-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+  .closing-btn,
+  .btn-phone,
+  .btn-whatsapp {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ==========================================================
+   3. MOBILE PHONES (320px to 480px)
+   ========================================================== */
+@media screen and (max-width: 480px) {
+  #top-bar {
+    padding: 10px 3% 6px;
+  }
+
+  .logo strong {
+    font-size: 1.15rem;
+  }
+
+  .logo span {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+
+  .table-book-btn {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    border-radius: 6px;
+  }
+
+  .navlinks a {
+    padding: 6px 2px;
+    font-size: 0.8rem;
+  }
+
+  #hero {
+    min-height: 480px;
+    padding: 50px 4%;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-des {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .special-dish-grid,
+  .review-grid,
+  .contact-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dish-img {
+    height: 220px;
+  }
+
+  .dish-title {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.15rem;
+  }
+
+  .m-hero,
+  #a-hero,
+  #r-hero {
+    padding: 50px 4% 30px;
+  }
+
+  .m-hero-title,
+  .a-title,
+  .r-title {
+    font-size: 1.85rem;
+  }
+
+  .group-title {
+    font-size: 1.4rem;
+  }
+
+  .dish-header-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .dish-header-row .price {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .gallery-card,
+  .item-featured {
+    height: 220px;
+  }
+
+  .form-wrapper {
+    padding: 24px 14px;
+    border-radius: 12px;
+  }
+
+  .form-heading {
+    font-size: 1.5rem;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 13px;
+    font-size: 0.95rem;
+  }
+
+  .map-embed-frame iframe {
+    height: 260px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #site-footer {
+    padding: 50px 4% 24px;
+  }
+}
+
+/* ==========================================================
+   4. FULL SITE ULTRA-WIDE & 4K OPTIMIZATION (min-width: 2560px)
+   ========================================================== */
+@media screen and (min-width: 2560px) {
+  body {
+    font-size: 1.6rem;
+    line-height: 1.85;
+  }
+
+  .about-container,
+  .dine-container,
+  .reviews-container,
+  .special-dish-grid,
+  .category-grid,
+  .menu-catalog,
+  .story-container,
+  .pillars-container,
+  .gallery-grid,
+  .gallery-header,
+  .contact-grid,
+  .location-container,
+  .footer-container,
+  .footer-bottom,
+  .visit-container,
+  .closing-container,
+  .final-cta-container {
+    max-width: 2400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #special-dish,
+  #home-about,
+  #dine-together,
+  #customer-reviews,
+  #a-story,
+  #a-special-pillar,
+  #a-gallery,
+  #r-contact,
+  #r-form-section,
+  #r-location,
+  .m-hero,
+  #a-hero,
+  #r-hero {
+    padding: 150px 6%;
+  }
+
+  .special-dish-title,
+  .dine-title,
+  .reviews-title,
+  .intro-title,
+  .m-hero-title,
+  .a-title,
+  .r-title,
+  .gallery-title,
+  .location-title,
+  .final-cta-title,
+  .closing-title {
+    font-size: 5.6rem;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+  }
+
+  #top-bar {
+    padding: 36px 6%;
+    max-width: 100%;
+  }
+
+  .logo strong {
+    font-size: 3.2rem;
+  }
+
+  .logo span {
+    font-size: 1.35rem;
+    letter-spacing: 4px;
+    margin-top: 4px;
+  }
+
+  .navlinks {
+    gap: 48px;
+  }
+
+  .navlinks a {
+    font-size: 2rem;
+    padding: 12px 26px;
+    border-radius: 12px;
+  }
+
+  .table-book-btn {
+    font-size: 1.8rem;
+    padding: 18px 38px;
+    border-radius: 12px;
+  }
+
+  #hero {
+    min-height: 1050px;
+    padding: 180px 6%;
+  }
+
+  .tagline {
+    font-size: 1.85rem;
+    letter-spacing: 4.5px;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    max-width: 1800px;
+    font-size: 7.8rem;
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 38px;
+  }
+
+  .hero-des {
+    max-width: 1250px;
+    font-size: 2.1rem;
+    line-height: 1.7;
+    margin-bottom: 60px;
+  }
+
+  .h-btn {
+    gap: 32px;
+  }
+
+  .explore-menu-btn,
+  .whatsapp-btn {
+    padding: 22px 50px;
+    font-size: 1.65rem;
+    border-radius: 12px;
+  }
+
+  .special-dish-header {
+    margin-bottom: 85px;
+  }
+
+  .special-dish-tagline {
+    font-size: 1.55rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+
+  .special-dish-grid {
+    gap: 56px;
+  }
+
+  .dish-card {
+    border-radius: 24px;
+  }
+
+  .dish-img {
+    height: 540px;
+  }
+
+  .dish-card > :not(.dish-img):not(.diet-badge) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dish-title {
+    font-size: 2.4rem;
+    margin-top: 30px;
+    margin-bottom: 14px;
+  }
+
+  .dish-des {
+    font-size: 1.6rem;
+    line-height: 1.65;
+    margin-bottom: 26px;
+  }
+
+  .price {
+    font-size: 2.4rem;
+    padding-bottom: 34px;
+  }
+
+  .diet-badge {
+    width: 38px;
+    height: 38px;
+    top: 24px;
+    right: 24px;
+    border-width: 3px;
+    border-radius: 6px;
+  }
+
+  .diet-badge .diet-dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .specials-footer-cta {
+    margin-top: 70px;
+  }
+
+  .view-full-menu-link {
+    font-size: 1.8rem;
+    border-bottom-width: 3px;
+    padding-bottom: 6px;
+  }
+
+  .about-container {
+    gap: 140px;
+    grid-template-columns: 1.15fr 1fr;
+  }
+
+  .about-eyebrow {
+    font-size: 1.55rem;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+  }
+
+  .short-intro {
+    font-size: 2.05rem;
+    line-height: 1.85;
+    margin-bottom: 56px;
+  }
+
+  .discover-story-btn {
+    padding: 22px 52px;
+    font-size: 1.65rem;
+    border-radius: 12px;
+    border-width: 3px;
+  }
+
+  .about-img-frame {
+    border-radius: 28px;
+  }
+
+  .about-img {
+    height: 780px;
+  }
+
+  /* Why Dine With Us (Alternating Zig-Zag 4K Layout) */
+  .dine-header {
+    margin-bottom: 90px;
+  }
+
+  .dine-tagline {
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+  }
+
+  .dine-grid {
+    gap: 64px;
+  }
+
+  .dine-card {
+    border-radius: 28px;
+  }
+
+  .dine-img-wrap {
+    min-height: 520px;
+    height: 100%;
+  }
+
+  .dine-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .dine-card-body {
+    padding: 80px 90px;
+  }
+
+  .dine-card-eyebrow {
+    font-size: 1.3rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+
+  .dine-card-title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .dine-card-des {
+    font-size: 1.75rem;
+    line-height: 1.85;
+  }
+
+  .reviews-header {
+    margin-bottom: 85px;
+  }
+
+  .reviews-tagline {
+    font-size: 1.55rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+
+  .review-grid {
+    gap: 56px;
+  }
+
+  .review-card {
+    padding: 68px 52px;
+    border-radius: 24px;
+  }
+
+  .review-rating {
+    font-size: 2.1rem;
+    margin-bottom: 26px;
+  }
+
+  .review-quotes {
+    font-size: 1.7rem;
+    line-height: 1.75;
+    margin-bottom: 34px;
+  }
+
+  .customer-name {
+    font-size: 1.6rem;
+  }
+
+  .visit-us {
+    padding: 85px 6%;
+  }
+
+  .visit-container {
+    gap: 60px;
+  }
+
+  .visit-label {
+    font-size: 1.3rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
+  }
+
+  .visit-us .address,
+  .visit-us .hours {
+    font-size: 1.75rem;
+  }
+
+  .visit-actions {
+    gap: 22px;
+  }
+
+  .visit-btn {
+    padding: 20px 44px;
+    font-size: 1.55rem;
+    border-radius: 10px;
+  }
+
+  .m-hero {
+    padding: 140px 6% 85px;
+  }
+
+  .m-tagline {
+    font-size: 1.55rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .m-hero-des {
+    font-size: 1.95rem;
+    max-width: 950px;
+  }
+
+  .menu-categories-section {
+    padding: 70px 6% 35px;
+  }
+
+  .category-grid {
+    gap: 44px;
+  }
+
+  .category-card {
+    padding: 48px 38px;
+    border-radius: 20px;
+  }
+
+  .cat-num {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .cat-title {
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+  }
+
+  .cat-des {
+    font-size: 1.5rem;
+  }
+
+  .menu-catalog {
+    padding: 70px 6% 140px;
+  }
+
+  .group-header {
+    gap: 36px;
+    margin-bottom: 52px;
+  }
+
+  .group-title {
+    font-size: 3.4rem;
+  }
+
+  .dish-grid {
+    gap: 48px;
+  }
+
+  .menu-dish-item {
+    padding: 38px 44px;
+    border-radius: 18px;
+  }
+
+  .dish-header-row {
+    gap: 22px;
+    margin-bottom: 16px;
+  }
+
+  .dish-header-row .dish-name {
+    font-size: 2.2rem;
+  }
+
+  .dish-header-row .price {
+    font-size: 2.2rem;
+  }
+
+  .menu-dish-item .dish-des {
+    font-size: 1.55rem;
+    line-height: 1.7;
+  }
+
+  .a-tagline {
+    font-size: 1.55rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .a-des {
+    font-size: 2.05rem;
+    max-width: 1050px;
+    line-height: 1.75;
+  }
+
+  .story-container {
+    gap: 140px;
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .section-tag {
+    font-size: 1.45rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 22px;
+  }
+
+  .a-heading {
+    font-size: 4.2rem;
+    line-height: 1.2;
+    margin-bottom: 36px;
+  }
+
+  .story-para {
+    font-size: 1.75rem;
+    line-height: 1.9;
+    margin-bottom: 30px;
+  }
+
+  .story-img-frame {
+    border-radius: 26px;
+  }
+
+  .story-img {
+    height: 780px;
+  }
+
+  .pillars-container {
+    gap: 56px;
+  }
+
+  .pillar-card {
+    padding: 68px 52px;
+    border-radius: 22px;
+  }
+
+  .pillar-tagline {
+    font-size: 1.35rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 22px;
+  }
+
+  .pillar-title {
+    font-size: 2.45rem;
+    margin-bottom: 22px;
+  }
+
+  .pillar-des {
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+
+  .gallery-header {
+    margin-bottom: 75px;
+  }
+
+  .gallery-tagline {
+    font-size: 1.45rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+
+  .gallery-grid {
+    grid-template-rows: 500px 500px;
+    gap: 38px;
+  }
+
+  .gallery-card {
+    border-radius: 22px;
+  }
+
+  .gallery-caption {
+    font-size: 1.55rem;
+    padding: 24px 32px;
+  }
+
+  #a-closing {
+    padding: 150px 6%;
+  }
+
+  .closing-container {
+    max-width: 1250px;
+  }
+
+  .closing-tagline {
+    font-size: 1.45rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .closing-des {
+    font-size: 1.95rem;
+    line-height: 1.75;
+    margin-bottom: 56px;
+  }
+
+  .closing-btn-group {
+    gap: 28px;
+  }
+
+  .closing-btn {
+    padding: 22px 50px;
+    font-size: 1.65rem;
+    border-radius: 12px;
+  }
+
+  .r-tagline {
+    font-size: 1.45rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .r-des {
+    font-size: 1.95rem;
+    max-width: 1050px;
+  }
+
+  .r-address {
+    font-size: 1.6rem;
+  }
+
+  .contact-grid {
+    gap: 52px;
+  }
+
+  .contact-block {
+    padding: 62px 50px;
+    border-radius: 22px;
+  }
+
+  .contact-tagline {
+    font-size: 1.35rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+  }
+
+  .contact-title {
+    font-size: 2.45rem;
+    margin-bottom: 16px;
+  }
+
+  .contact-des {
+    font-size: 1.6rem;
+    margin-bottom: 26px;
+  }
+
+  .contact-link {
+    font-size: 1.75rem;
+  }
+
+  .contact-block .days {
+    font-size: 1.65rem;
+  }
+
+  .contact-block .time {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-note {
+    font-size: 1.3rem;
+  }
+
+  .form-wrapper {
+    max-width: 1350px;
+    padding: 85px 75px;
+    border-radius: 28px;
+  }
+
+  .form-heading {
+    font-size: 4.2rem;
+    margin-bottom: 18px;
+  }
+
+  .form-des {
+    font-size: 1.75rem;
+    margin-bottom: 56px;
+  }
+
+  .form-grid {
+    gap: 44px;
+    margin-bottom: 48px;
+  }
+
+  .field label {
+    font-size: 1.55rem;
+    margin-bottom: 14px;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    padding: 22px 26px;
+    font-size: 1.55rem;
+    border-radius: 14px;
+  }
+
+  .submit-btn,
+  .book-again-btn {
+    padding: 26px;
+    font-size: 1.75rem;
+    border-radius: 14px;
+  }
+
+  .form-disclaimer {
+    font-size: 1.35rem;
+    margin-top: 24px;
+  }
+
+  .confirm-icon {
+    font-size: 5.6rem;
+  }
+
+  .confirm-title {
+    font-size: 3.2rem;
+  }
+
+  .confirm-text {
+    font-size: 1.65rem;
+    max-width: 880px;
+    margin-bottom: 44px;
+  }
+
+  .booking-summary-card {
+    max-width: 800px;
+    padding: 38px;
+    font-size: 1.6rem;
+    margin-bottom: 44px;
+    border-radius: 16px;
+  }
+
+  .location-container {
+    gap: 95px;
+  }
+
+  .location-tag {
+    font-size: 1.45rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+
+  .location-address {
+    font-size: 1.85rem;
+    line-height: 1.85;
+    margin-bottom: 22px;
+  }
+
+  .location-note {
+    font-size: 1.6rem;
+    margin-bottom: 38px;
+  }
+
+  .directions-btn {
+    padding: 22px 50px;
+    font-size: 1.65rem;
+    border-radius: 12px;
+    border-width: 3px;
+  }
+
+  .map-embed-frame {
+    border-radius: 24px;
+  }
+
+  .map-embed-frame iframe {
+    height: 640px;
+  }
+
+  #r-final-cta {
+    padding: 130px 6%;
+  }
+
+  .final-cta-container {
+    max-width: 1200px;
+  }
+
+  .final-cta-des {
+    font-size: 1.85rem;
+    line-height: 1.75;
+    margin-bottom: 48px;
+  }
+
+  .final-cta-actions {
+    gap: 28px;
+  }
+
+  .btn-phone,
+  .btn-whatsapp {
+    padding: 22px 50px;
+    font-size: 1.65rem;
+    border-radius: 12px;
+  }
+
+  #site-footer {
+    padding: 130px 6% 50px;
+  }
+
+  .footer-container {
+    gap: 75px;
+    margin-bottom: 85px;
+  }
+
+  .footer-logo {
+    font-size: 3rem;
+    margin-bottom: 22px;
+  }
+
+  .brand-line {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    max-width: 520px;
+  }
+
+  .footer-heading {
+    font-size: 2.1rem;
+    margin-bottom: 28px;
+  }
+
+  .footer-links li {
+    margin-bottom: 18px;
+  }
+
+  .footer-links a,
+  .contact-col p,
+  .footer-phone a,
+  .social-link {
+    font-size: 1.6rem;
+  }
+
+  .footer-bottom {
+    padding-top: 44px;
+  }
+
+  .copyright {
+    font-size: 1.35rem;
+  }
+}

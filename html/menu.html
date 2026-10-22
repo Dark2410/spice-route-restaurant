@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Route Restaurant | Menu</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+
+<body>
+    <!-- Shared Header -->
+    <header id="top-bar">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <strong>Spice Route</strong>
+                <span>AUTHENTIC INDIAN DINING</span>
+            </a>
+        </div>
+        <nav class="navbar" aria-label="Main navigation">
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active" aria-current="page">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reservation.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="btn">
+            <a href="reservation.html" class="table-book-btn">Reserve a Table</a>
+        </div>
+    </header>
+
+    <main class="menu-container">
+        <!-- Section 1: Page Header -->
+        <section class="m-hero">
+            <span class="m-tagline">CULINARY TRADITIONS</span>
+            <h1 class="m-hero-title">Explore Our Menu</h1>
+            <p class="m-hero-des">Discover the authentic flavours of Spice Route.</p>
+        </section>
+
+        <!-- Section 2: Four Category Cards -->
+        <section class="menu-categories-section">
+            <div class="category-grid">
+                <a href="#starters" class="category-card">
+                    <span class="cat-num">01</span>
+                    <h3 class="cat-title">Starters</h3>
+                    <p class="cat-des">Tikka, kebabs, appetizers</p>
+                </a>
+                <a href="#main-course" class="category-card">
+                    <span class="cat-num">02</span>
+                    <h3 class="cat-title">Main Course</h3>
+                    <p class="cat-des">Vegetarian & chicken curries</p>
+                </a>
+                <a href="#biryani" class="category-card">
+                    <span class="cat-num">03</span>
+                    <h3 class="cat-title">Biryani</h3>
+                    <p class="cat-des">Aromatic dum biryani specials</p>
+                </a>
+                <a href="#beverages" class="category-card">
+                    <span class="cat-num">04</span>
+                    <h3 class="cat-title">Beverages</h3>
+                    <p class="cat-des">Chaas & refreshing drinks</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 3: Dish Listings -->
+        <div class="menu-catalog">
+            <!-- 01. Starters -->
+            <section class="menu-category-group" id="starters">
+                <div class="group-header">
+                    <h2 class="group-title">Starters & Kebabs</h2>
+                    <span class="group-line"></span>
+                </div>
+                <div class="dish-grid">
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Paneer Tikka</h3>
+                            <span class="diet-badge veg" aria-label="Vegetarian"><span class="diet-dot">Veg</span></span>
+                            <span class="price">₹220</span>
+                        </div>
+                        <p class="dish-des">Marinated paneer grilled with Indian spices and bell peppers.</p>
+                    </article>
+
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Chicken Tikka</h3>
+                            <span class="diet-badge non-veg" aria-label="Non-Vegetarian"><span class="diet-dot">Non-Veg</span></span>
+                            <span class="price">₹280</span>
+                        </div>
+                        <p class="dish-des">Succulent boneless chicken marinated in spiced yoghurt and chargrilled.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 02. Main Course -->
+            <section class="menu-category-group" id="main-course">
+                <div class="group-header">
+                    <h2 class="group-title">Main Course</h2>
+                    <span class="group-line"></span>
+                </div>
+                <div class="dish-grid">
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Paneer Butter Masala</h3>
+                            <span class="diet-badge veg" aria-label="Vegetarian"><span class="diet-dot">Veg</span></span>
+                            <span class="price">₹260</span>
+                        </div>
+                        <p class="dish-des">Paneer cubes in a creamy, velvety tomato and cashew gravy.</p>
+                    </article>
+
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Butter Chicken</h3>
+                            <span class="diet-badge non-veg" aria-label="Non-Vegetarian"><span class="diet-dot">Non-Veg</span></span>
+                            <span class="price">₹320</span>
+                        </div>
+                        <p class="dish-des">Tender tandoori chicken simmered in rich tomato butter gravy.</p>
+                    </article>
+
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Butter Naan</h3>
+                            <span class="diet-badge veg" aria-label="Vegetarian"><span class="diet-dot">Veg</span></span>
+                            <span class="price">₹45</span>
+                        </div>
+                        <p class="dish-des">Traditional clay oven flatbread brushed with melted butter.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 03. Biryani -->
+            <section class="menu-category-group" id="biryani">
+                <div class="group-header">
+                    <h2 class="group-title">Biryani Specials</h2>
+                    <span class="group-line"></span>
+                </div>
+                <div class="dish-grid">
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Veg Biryani</h3>
+                            <span class="diet-badge veg" aria-label="Vegetarian"><span class="diet-dot">Veg</span></span>
+                            <span class="price">₹180</span>
+                        </div>
+                        <p class="dish-des">Fragrant basmati rice slow-cooked with fresh garden vegetables and whole spices.</p>
+                    </article>
+
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Chicken Biryani</h3>
+                            <span class="diet-badge non-veg" aria-label="Non-Vegetarian"><span class="diet-dot">Non-Veg</span></span>
+                            <span class="price">₹240</span>
+                        </div>
+                        <p class="dish-des">Layered dum basmati rice with spiced chicken, caramelized onions, and saffron.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 04. Beverages -->
+            <section class="menu-category-group" id="beverages">
+                <div class="group-header">
+                    <h2 class="group-title">Beverages</h2>
+                    <span class="group-line"></span>
+                </div>
+                <div class="dish-grid">
+                    <article class="menu-dish-item">
+                        <div class="dish-header-row">
+                            <h3 class="dish-name">Masala Chaas</h3>
+                            <span class="diet-badge veg" aria-label="Vegetarian"><span class="diet-dot">Veg</span></span>
+                            <span class="price">₹50</span>
+                        </div>
+                        <p class="dish-des">Traditional churned buttermilk tempered with roasted cumin and coriander.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer id="site-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <strong class="footer-logo">Spice Route</strong>
+                <p class="brand-line">
+                    Authentic Indian cuisine prepared with traditional techniques and served with heartfelt hospitality in Baner, Pune.
+                </p>
+            </div>
+            <div class="footer-col links-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Explore Menu</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="reservation.html">Contact & Reservations</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-col contact-col">
+                <h3 class="footer-heading">Dining Hours</h3>
+                <p>Monday – Sunday: 12:00 PM – 11:00 PM</p>
+                <p class="footer-phone">Inquiries: <a href="tel:+911234567890">+91 12345 67890</a></p>
+            </div>
+            <div class="footer-col social-col">
+                <h3 class="footer-heading">Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 Spice Route Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

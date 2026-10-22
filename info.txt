@@ -1,0 +1,113 @@
+1. Master Project Requirements & Constraints
+Client & Restaurant: Spice Route Restaurant, Baner, Pune.
+
+Operating Hours: 12:00 PM – 11:00 PM daily.
+
+Page Structure (4 Pages):
+
+index.html (Home)
+
+menu.html (Menu: Starters, Main Course, Biryani, Beverages)
+
+about.html (About Us & Ambiance preview)
+
+contact.html (Contact, Timings, Google Maps & Reservation Form)
+
+Target Devices & Viewports: Mobile-first, strictly supporting screen widths down to 320px without horizontal scroll or text clipping.
+
+Navigation Requirement:
+
+Mobile (Two-tier stacked header):
+
+Row 1: Logo (Spice Route) on the left, prominent CTA button (Book Table / WhatsApp) on the right.
+
+Row 2: Horizontal links (Home, Menu, About, Contact). Must fit smoothly across 320px screens using calibrated padding and font scaling.
+
+Desktop: Single unified horizontal header.
+
+Key Functionality (WhatsApp Reservation):
+
+Form fields: Name, Phone, Date, Time, Guest Count.
+
+JavaScript gathers the fields, validates them, URI-encodes the message, and opens [https://wa.me/](https://wa.me/)<number>?text=....
+
+Client Safeguard: Genuine reviews and authentic photos are pending from the client; use clear structural placeholders rather than invented testimonials or unapproved content.
+
+First Draft Deadline: October 19, 2026 (Before 9:00 PM IST).
+
+2. Tailored Color Palette & CSS Variables
+An Indian/Mughlai dining theme benefits from rich, warm spices (saffron, turmeric, deep cardamom terracotta) grounded by deep charcoal and soft warm-cream backgrounds.
+
+CSS
+:root {
+  /* Brand Accents */
+  --color-primary: #C85A17;       /* Warm Terracotta / Rich Paprika: Main CTAs, highlighted dish prices, active nav links */
+  --color-primary-hover: #A8450E; /* Darker Terracotta: Hover & tap states */
+  --color-accent: #E68A00;        /* Saffron Gold: Badges, star icons, vegetarian/chef special accents */
+  --color-whatsapp: #25D366;      /* WhatsApp Green: Dedicated reservation & quick-chat buttons */
+  --color-whatsapp-hover: #1EBE5D;
+
+  /* Surfaces & Backgrounds */
+  --bg-main: #FAFAF7;             /* Soft Ivory/Warm Off-White: Body background, comfortable reading */
+  --bg-surface: #FFFFFF;          /* Pure White: Dish cards, review cards, form containers */
+  --bg-surface-alt: #F3EFEA;      /* Light Sand/Warm Neutral: Alternating section strips, footer teaser */
+  --bg-dark-hero: rgba(18, 14, 12, 0.65); /* Dark Cocoa Overlay: Guarantees readable white text over hero food photos */
+
+  /* Typography & Text */
+  --text-heading: #201815;        /* Deep Roast Cocoa/Charcoal: Headings and section titles */
+  --text-body: #4A423E;           /* Muted Espresso: Paragraphs, dish descriptions, labels */
+  --text-muted: #8C827A;          /* Light Muted Gray-Brown: Category subtext, subtle borders, copyright */
+
+  /* Borders & Shadows */
+  --border-light: #E8E0D7;        /* Subtle warm divider lines and card borders */
+  --shadow-subtle: 0 4px 16px rgba(32, 24, 21, 0.06);
+  --shadow-hover: 0 8px 24px rgba(32, 24, 21, 0.12);
+}
+3. Practical Frontend Development Tips
+Preventing 320px Navigation Overflow:
+
+On the second row of the mobile header, avoid wide margins. Use:
+
+CSS
+.mobile-nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+}
+.mobile-nav-links a {
+  font-size: 0.85rem;
+  padding: 4px 6px;
+  white-space: nowrap;
+}
+Hero Legibility: Always use a dark linear gradient over the background image:
+
+CSS
+background: linear-gradient(rgba(20, 14, 10, 0.7), rgba(20, 14, 10, 0.7)), url('assets/hero.jpg') center/cover;
+Fast Menu Scanning:
+
+Include clear Veg (Green dot in square) and Non-Veg (Red dot in triangle/square) SVGs next to item titles.
+
+Use CSS Grid with repeat(auto-fit, minmax(280px, 1fr)) for card layouts so items naturally wrap without awkward blank gaps.
+
+WhatsApp Dynamic Link Encoding:
+
+Use encodeURIComponent() to prevent broken formatting when dates or spaces are submitted:
+
+JavaScript
+const message = `Hello Spice Route! I would like to reserve a table:\n` +
+                `• Name: ${name}\n` +
+                `• Guests: ${guests}\n` +
+                `• Date: ${date}\n` +
+                `• Time: ${time}`;
+const waUrl = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(message)}`;
+window.open(waUrl, '_blank');
+4. Ideas to Elevate Section Design
+Signature Specials Badge: Add a small pill badge above dish photos (e.g., "Chef's Signature" or "Bestseller") using --color-accent background and bold white text to draw immediate eyes to the featured Biryani and Paneer dishes.
+
+Menu Sticky Category Tabs: On menu.html, add a sticky horizontal tab filter (All, Starters, Main Course, Biryani, Beverages) right below the header. Clicking or tapping automatically scrolls the page to that category without reloading.
+
+Placeholder Review Cards: Since the client requested no invented testimonials, style these cards as an elegant quote shell with 5 gold stars and a clean note: "Verified Diner Reviews coming soon — visit us in Baner to experience our dishes firsthand!"
+
+Interactive Call / Directions Pill: In the Visit Us section, provide two large side-by-side button pills ([ 📞 Call: +91 ... ] and [ 📍 Open in Google Maps ]) that trigger native system intents on smartphones (tel: and Maps navigation).
